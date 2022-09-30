@@ -1,0 +1,238 @@
+CODE 1
+
+class MyTest {
+    public long computeDurationInMilliseconds(int hours, int minutes, int seconds) {
+        long duration = (((hours * 60) + minutes) * 60 + seconds) * 1000;
+        return duration;
+    }
+
+    public void doSomething() {
+        throw new RuntimeException("Runtime error message");
+    }
+}
+
+CODE 2
+
+class MyClass {
+    final static int foo = 42;
+
+    public int compute(int a) {
+        return a * foo;
+    }
+}
+
+CODE 3
+
+class StringUtils {
+    public static String concatenate(String s1, String s2) {
+        return s1.concat(s2);
+    }
+}
+
+CODE 4
+
+package my.company;
+import my.company2.SomeType;
+
+class ExampleClass {
+    public String someString;
+    public SomeType someType;
+}
+
+CODE 5
+
+class Example2Class {
+    public void foo(String bar) {
+        throw new RuntimeException(bar);
+    }
+}
+
+CODE 6
+public class Foo {
+    public Collection<User> listUsers() {
+        File userList = new File("/home/mylogin/Dev/users.txt");
+        Collection<User> users = parse(userList);
+        return users;
+    }
+}
+
+CODE 7
+
+class MyFoo {
+    static public void main(String[] args) {
+        System.out.println("It works");
+    }
+}
+
+CODE 8 
+
+class MyFoorest {
+
+    static public void main(String[] args) {
+        System.out.println("It works");
+        prepare("action1");
+        execute("action1");
+        release("action1");
+    }
+
+    static void prepare(String string) {
+        System.out.println(string.concat("prepared"));
+    }
+
+    static void execute(String string) {
+        System.out.println(string.concat("executed"));
+    }
+
+    static void release(String string) {
+        System.out.println(string.concat("released"));
+    }
+
+}
+
+CODE 9
+
+class ParentClass {
+    public boolean doSomething() {
+        System.out.println("Parent doing something");
+        return true;
+    }
+}
+
+class FirstChildClass extends ParentClass {
+
+}
+
+CODE 10
+
+class MikeClass {
+
+    public void doSomething() {
+        doIt();
+    }
+
+    private void doIt() {
+        System.out.println("I am doing it");
+    }
+}
+CODE 11
+
+class Person implements Serializable {
+    private static final long serialVersionUID = 1905122041950251207L;
+    private String name;
+    private Address address = new Address();
+
+    class Address {
+
+    }
+
+}
+
+CODE 12
+
+class Mine {
+
+    public int foo(int a) {
+        int b = 12;
+        if (a == 1) {
+            return b;
+        } else {
+            return a;
+        }
+    }
+}
+
+CODE 13
+
+class Myclass {
+    public final static int THRESHOLD = 3;
+}
+
+CODE 14
+
+class A {
+    public void process(List<A> list) {
+        list.stream()
+                .filter(A.class::isInstance)
+                .map(a -> (B) a)
+                .forEach(b -> {
+                    System.out.println(b);
+                });
+    }
+
+    class B extends A {
+        <T> T getObject() {
+            return null;
+        }
+    }
+
+}
+
+CODE 15
+
+abstract class Status {
+    int OPEN = 1;
+    int CLOSED = 2;
+}
+
+CODE 17
+
+class MyBaidu {
+    public static void main(String[] args) {
+        Boolean b = true;
+        if (b) {
+            foo();
+        } else {
+            bar();
+        }
+    }
+}
+CODE 18
+
+class FirstBaidu {
+    public void checkFile(File file) {
+        if (file != null && file.isFile() && !file.isDirectory()) {
+            System.out.println("File is okay");
+        }
+    }
+}
+
+CODE 19
+
+class HelloWorld {
+    public void myMethod() {
+        String message = new Random().nextBoolean() ? "hello world" : "My Cat";
+        message = message.concat(" done");
+        System.out.println(message);
+    }
+}
+
+CODE 20
+class MyRandom {
+
+    public static void main(String[] args) {
+
+        boolean exp = true;
+        if (booleanMethod(exp)) { /* ... */ }
+
+        exp = false;
+        if (!booleanMethod(exp)) { /* ... */ }
+
+        exp = false;
+        if (booleanMethod(exp)) { /* ... */ }
+
+        doSomething(!exp);
+
+        doSomething(booleanMethod(exp));
+
+
+    }
+
+    public static boolean booleanMethod(boolean exp) {
+        return exp;
+    }
+
+    public static boolean doSomething(boolean value) {
+        return booleanMethod(value);
+    }
+
+}
